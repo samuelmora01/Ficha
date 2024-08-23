@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu{
+    background-color: #1A202C;
+    color: #fff;
+    height: 150px;
+}
+
+.menu__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu__links{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+}
+
+.menu__item{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu__item:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__link{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.menu__link:hover{
+    background-color: #5e7094;
+}
+
+
+.menu__arrow{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.menu__nesting{
+    z-index: 1;
+    list-style: none;
+    transition:clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #000;
+}
+
+.menu__link--inside{
+    padding: 30px 100px 30px 20px;
+}
+
+.menu__link--inside:hover{
+    background-color: #798499;
+}
+
+.menu__hamburguer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__img{
+    display: block;
+    width: 36px;
+}
+
+
+
+@media (max-width:800px){
+    .menu__hamburguer{
+        display: flex;
+    }
+
+    .menu__item{
+        --clip:0;
+        overflow:hidden ;
+    }
+
+    .menu__item--active{
+        --transform: rotate(0);
+        --background: #5e7094;
+    }
+
+    .menu__item--show{
+        background-color: var(--background);
+    }
+
+
+    .menu__links{
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        top: 150px;
+        bottom: 0;
+        right: 0;
+        background-color: #000;
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translateX(100%);
+    }
+
+    .menu__links--show{
+        transform: unset;
+        width: 100%;
+    }
+
+    .menu__link{
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .menu__arrow{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .menu__nesting{
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu__link--inside{
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid #798499;
+    }
+}
+
+
+
+/* imagen portada */
+
+.hero {
+    background-image: url(../img/cocinafondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative; 
+    margin-bottom: 2rem;
+    z-index: 1; 
+}
+
+
+.menu__container {
+    position: relative; 
+    z-index: 1000; 
+}
+.contenido-hero {
+    position: absolute;
+    background-color: rgba( 0 0 0 / 40%) ;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero p, h2 {
+    color: white;
+    font-size: 3rem;
+}
+/* menus */
+
+.cursos {
+    list-style: none;
+    margin: 350px;
+}
+
+.widget-curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.widget-curso:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.widget-curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.widget-curso__info {
+    font-weight: normal;
+}
+
+.widget-curso__label,
+.widget-curso__info {
+    font-size: 2rem;
+}
+
+.footer {
+    background-color: var(--negro);
+    justify-content: space-between;
+    padding-top: 3rem 0;
+    margin-top: 4rem;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+@media (min-width:768px) {
+    .footer {
+        display: block;
+        padding-bottom: 2rem;
+    }
+}
+
+/**Sobre Nosotros**/
+
+
+@media (min-width: 400px) {
+    .curso {
+        margin: 0;
+        margin-top: 50px;
+        padding: 3rem 0;
+        border-bottom: 2px solid var(--gris);
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+}
+
+.curso {
+    margin: 350px;
+    margin-top: 50px;
+    padding: 3rem 0;
+    border-bottom: 2px solid var(--gris);
+}
+
+.curso:last-of-type {
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.curso:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.curso__info {
+    font-weight: normal;
+}
+
+.curso__label,
+.curso__info {
+    font-size: 2rem;
+}
+@media (max-width:800px) {
+    .curso {
+        display: block; 
+        margin: 0; 
+        padding: 1rem 0; 
+        border-bottom: 2px solid var(--gris);
+    }
+
+    .curso__imagen {
+        text-align: center; 
+        margin-bottom: 1rem; 
+    }
+
+    .curso__imagen img {
+        max-width: 100%; 
+        height: auto; 
+        display: inline-block; 
+    }
+
+    .curso__informacion {
+        padding: 0 1rem; 
+        text-align: center; 
+    }
+
+    .curso__informacion h4,
+    .curso__informacion p {
+        margin: 0; 
+    }
+
+    /* Centrando videos */
+    .curso__imagen iframe {
+        display: block; 
+        margin: 0 auto; 
+        max-width: 100%;
+        width: 400px;
+        height: 600; 
+    }
+   
+}
+
+
