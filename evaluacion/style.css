@@ -1,0 +1,223 @@
+:root {
+    --blanco:#fff;
+    --negro:#000;
+    --primario:dodgerblue;
+    --secundario:yellow;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem;
+    color: var(--negro);
+    background-color:var(--primario);
+    align-items: center;
+    text-align: center;
+}
+
+.principal_logo {
+    grid-column: 1/2;
+}
+
+.principal {
+    grid-column: 2/5;
+}
+
+
+
+.logo {
+    width: 200px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.enlace {
+    padding-left: 2rem;
+    text-decoration: none;
+    color: var(--negro);
+    padding: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.enlace:last-of-type {
+    margin-right: 2rem;
+}
+
+.enlace:hover {
+    background-color: var(--secundario);
+}
+
+
+
+/* ................................. */
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.descubre {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: gray;
+    grid-column: 1/2;
+    padding: 2rem;
+}
+
+.boton {
+    padding: 1rem;
+    color: white;
+    background-color: var(--secundario);
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+
+.cursos {
+    background-color: var(--secundario);
+    grid-column: 2/5;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2rem;
+}
+
+.imagen {
+    width: 250px;
+    height: 250px;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+/* ----------------------------------------- */
+.profesores {
+    text-align: center;
+    align-items: center;
+    margin-top: 4rem;
+    display: grid;
+    border: var(--primario) solid 1px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.perfil li {
+    grid-column: 1/2;
+    list-style: none;
+}
+
+.perfil {
+    padding: 5rem;
+    border: var(--primario) solid 1px;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+}
+
+.perfil h3 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--primario);
+}
+
+.logros {
+    padding: 4rem;
+    border: var(--primario) solid 1px;
+    grid-column: 3/4;
+}
+
+
+/* --------------------------------------------- */
+span {
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+}
+.videos-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--blanco);
+}
+
+.fc {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: var(--primario) solid 1px;
+    padding: 0.5rem;
+    color: black;
+    margin-top: 2rem;
+    color: var(--blanco);
+}
+.fc > p {
+    color: black;
+}
+
+.fc img {
+    width: 250px;
+    height: 250px;
+}
+
+.sub {
+    color: black;
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+.fon {
+    background-color: gray;
+    padding: 2rem;
+    width: 100%;
+}
+
+.videos_1 {
+    grid-column:1/2;
+}
+
+.videos_2 {
+    grid-column: 2/3;
+}
+
+.videos_3 {
+    grid-column: 3/4;
+}
+
+iframe {
+    width: 250px;
+    height: 250px;
+}
+
+/* ----------------- */
+
+.footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer h3 {
+    margin-bottom: 2rem;
+}
+
+.interes {
+    list-style: none;
+}
+
+.contactos ul {
+    list-style: none;
+}
