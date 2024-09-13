@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>BlogDeCafe</title>
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Blog de café con consejos y cursos</h2>
+            <p>Aprende de los expertos con las mejores recetas, consejos y técnicas para disfrutar del café en su máxima expresión. Nuestro blog está dedicado a ofrecerte contenido valioso para que puedas explorar el fascinante mundo del café.</p>
+        </div>
+    </header>
+
+    <main class="contenedor contenido-principal">
+        <h3 class="centrar-texto">3 Deliciosas Recetas de Café</h3>
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Cards con iframe de YouTube</title>
+        </head>
+        <body>
+            <div class="contenedor">
+                <!DOCTYPE html>
+                <html lang="es">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Cards con iframe de YouTube</title>
+                    <style>
+                        :root {
+                            --fuenteHeading: 'PT Sans', sans-serif;
+                            --fuenteParrafos: 'Open Sans', sans-serif;
+                            --primario: #784D3C;
+                            --banco: #fff;
+                            --negro: #000;
+                            --gris: #e1e1e1;
+                        }
+                
+                        html {
+                            box-sizing: border-box;
+                            font-size: 62.5%; /* 1 rem */
+                        }
+                
+                        *, *::before, *:after {
+                            box-sizing: inherit;
+                        }
+                
+                        body {
+                            font-family: var(--fuenteParrafos);
+                            font-size: 1.6rem;
+                            line-height: 2;
+                            margin: 0;
+                            padding: 0;
+                            background-color: #f0f0f0;
+                        }
+                
+                        .contenedor {
+                            border-radius: 2rem;
+                            width: min(90%, 120rem);
+                            margin: 0 auto;
+                        }
+                
+                        .cards {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 2rem;
+                            margin: 4rem auto;
+                            justify-content: center;
+                            max-width: 120rem;
+                        }
+                
+                        .card {
+                            background-color: var(--banco);
+                            border: 2px solid var(--primario);
+                            border-radius: 8px;
+                            text-align: center;
+                            padding: 1.5rem;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        }
+                
+                        .card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+                        }
+                
+                        .card iframe {
+                            width: 100%;
+                            height: 200px;
+                            border: none;
+                        }
+                
+                        .card h3 {
+                            font-size: 2.2rem;
+                            margin-bottom: 1rem;
+                            color: var(--primario);
+                        }
+                
+                        .card p {
+                            font-size: 1.6rem;
+                            color: var(--negro);
+                        }
+                
+                    </style>
+                </head>
+                <body>
+                    <div class="contenedor">
+                        <div class="cards">
+                            <div class="card">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ee5ckwyWLI0?si=wpNbhwqBlcbsIDmq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="card__contenido">
+                                    <h3>Tipos de Granos de Café</h3>
+                                    <p>Conoce los diferentes tipos de granos de café, como Arábica, Robusta y Liberica, y descubre cómo cada uno aporta un sabor único a tu taza.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                                <div class="card__contenido">
+                                    <h3>Recetas de Café para Cada Ocasión</h3>
+                                    <p>Aprende a preparar deliciosas recetas de café en casa, desde un clásico Café Latte hasta un refrescante Cold Brew.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                                <div class="card__contenido">
+                                    <h3>Beneficios del Café para la Salud</h3>
+                                    <p>Descubre los múltiples beneficios del café, como mejorar la concentración y aportar antioxidantes esenciales para tu bienestar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </body>
+                </html>
+                
+        </body>
+        </html>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="blog">
+                <a  class="final logo" href="index.html"><h1 class="logo__nombre no-margin  centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1></a>
+            </div>
+    
+            <div class="redes">
+                <div class="line"></div>
+               <a href="https://www.facebook.com/"><img src="./img/simbolo-de-la-aplicacion-de-facebook.png" alt="" class="logos"></a>
+               <a href="https://www.youtube.com/"><img src="./img/youtube.png" alt="" class="logos"></a>
+               <a href="https://www.instagram.com/"><img src="./img/logotipo-de-instagram.png" alt="" class="logos"></a>
+               <a href="https://co.linkedin.com/"><img src="./img/linkedin.png" alt="" class="logos"></a>
+               <a href="https://x.com/">  <img src="./img/logotipo-de-twitter-sobre-fondo-negro.png" alt="" class="logos"></a> 
+               
+                <div class="line"></div>
+            </div>
+            <ul class="fin">
+                <li>Politica y Privacidad</li>
+                <li>Terminos y condiciones</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
